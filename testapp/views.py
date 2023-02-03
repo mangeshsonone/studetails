@@ -13,6 +13,7 @@ def studentdetails(request):
             name=fm.cleaned_data['name']
             address=fm.cleaned_data['address']
             student.objects.create(name=name,address=address)
+            
     fm=studentform()
     return render(request,'detail.html',{'form':fm})
 
